@@ -6,7 +6,10 @@ class Story:
     To  make a story, pass a list of prompts, and the text
     of the template.
 
-        >>> s = Story(["noun", "verb"],
+        >>> s = Story(
+        ...     "simple",
+        ...     "A Simple Tale",
+        ...     ["noun", "verb"],
         ...     "I love to {verb} a good {noun}.")
 
     To generate text from a story, pass in a dictionary-like thing
@@ -41,7 +44,7 @@ class Story:
 
 story1 = Story(
     "fairytale",
-    "Fairytale"
+    "Fairytale",
     ["place", "noun", "verb", "adjective", "plural_noun"],
     """Once upon a time in a long-ago {place}, there lived a
        large {adjective} {noun}. It loved to {verb} {plural_noun}."""

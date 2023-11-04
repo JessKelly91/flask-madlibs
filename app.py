@@ -3,11 +3,11 @@ from flask_debugtoolbar import DebugToolbarExtension
 from stories import stories
 
 app = Flask (__name__)
-app.config['SECRET_KEY'] = 'secret'
+app.config['SECRET_KEY'] = "secret"
 
 debug = DebugToolbarExtension(app)
 
-@app.route('/select-story')
+@app.route('/')
 def ask_story():
     """Show list of stories to choose from."""
     return render_template("select-story.html", stories = stories.values())
